@@ -1,0 +1,262 @@
+*{
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+header {
+    background-image: url("/assets/background-image.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 44rem;
+}
+header h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 1px 1px 0 #000000,
+    1px 1px 0 #000000;
+    overflow: hidden;
+    border-right: .15rem solid #000000;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15rem;
+    animation:
+    typing 3s steps(40, end),
+    blinking-typer .75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 24%; }
+    to { width: 24%; }
+}
+@keyframes blinking-typer {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: black;
+    }
+}
+.nav{
+    position: sticky;
+    top: 0;
+}
+nav {
+    background-color: #36364a;
+    width: 100%;
+    height: fit-content;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    font-size: 2rem;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover {
+    background-color: white;
+    color: #36364a;
+    transition: 0.7s ease-in-out;
+    border-radius: 5px;
+}
+body{
+background-image: url("/assets/background-body.jpg");
+}
+main{
+    text-align: center;
+}
+main h1{
+    font-size: 2rem;
+}
+main h1:hover{
+    font-size: 2.5rem;
+    transition: 0.5s ease-in-out;
+}
+
+#introductie{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+#introductie img {
+    max-width: 18%;
+    margin-top: 1rem;
+}
+#introductie img:hover {
+    box-shadow: 2px 2px 4px #000000;
+}
+#introductie img:active {
+    border: 2px solid black;
+    box-shadow: none;
+}
+#taaltabel table {
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+}
+main table {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    border: 3px solid white;
+    border-collapse: collapse;
+}
+main table td {
+    border: 1px solid white;
+}
+main table tr th {
+    background-color: #36364a;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: cornsilk 1px solid underline;
+}
+main table tr:nth-child(odd) {
+    background-color: #2e2a2a;
+}
+main table tr:nth-child(even) {
+    background-color: #5e5e7a;
+}
+#cv h1 {
+    margin-bottom: 20px;
+}
+#cv article ul {
+    margin-bottom: 1rem;
+}
+#cv article ul li{
+    padding: 0.5rem;
+}
+.container ul{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    border-radius: 10px;
+    background-color: #2e2a2a;
+}
+.container ul li h2 a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.container ul li h2 a:hover {
+    background-color: white;
+    color: #36364a;
+    border-radius: 5px;
+    transition: 0.7s ease-in-out;
+    text-decoration: #36364a dotted underline;
+    font-size: 1.6rem;
+}
+#ontwikkeling p {
+    width: 80%;
+    margin: 0 auto 2rem;
+}
+#ontwikkeling table {
+    width: 80%;
+    text-align: center;
+}
+#ontwikkeling table tbody th {
+    text-align: center;
+    background-color: #393965;
+    border: 1px solid white;
+}
+#ontwikkeling table thead th {
+    border: 1px solid white;
+}
+#ontwikkeling h4{
+    text-align: center;
+    margin-bottom: 5px;
+}
+#ontwikkeling p {
+    text-align: left;
+    padding: 5px;
+    margin: 0 auto 2rem;
+}
+.container ul li{
+    list-style: none;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 20%;
+    transition: all ease-in 0.7s;
+}
+.container ul li p{
+   display: none;
+}
+.container ul li:hover p{
+    display: block;
+}
+.container ul li:hover{
+    width: 30%;
+}
+#contact {
+    margin-bottom: 20px;
+}
+footer table{
+    width: 100%;
+    text-align: center;
+    background-color: #36364a;
+}
+footer table tr a {
+    text-decoration: none;
+}
+footer table tr a:hover {
+    color: #36364a;
+    background-color: white;
+    transition: 0.5s ease-in-out;
+}
+@media (max-width: 480px) {
+    header{
+        width: 100%;
+        background-image: url("/assets/background-image.jpg");
+        height: 53rem;
+    }
+    #introductie{
+        flex-direction: column;
+    }
+    #introductie img{
+        max-width: 40%;
+        margin-bottom: 1rem;
+    }
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .nav{
+        position: relative;
+    }
+    nav ul li{
+        font-size: 1.2rem;
+    }
+    body{
+        width: 100%;
+    }
+    .container ul{
+        flex-direction: column;
+    }
+    .container ul li{
+        width: 100%;
+        transition: 0.7s max-height ease-in;
+        max-height: 250px;
+    }
+    .container ul li:hover{
+        width: 100%;
+        max-height: 500px;
+    }
+    @keyframes typing {
+        from{width: 0}
+        to { width: 78%; }
+    }
+    #ontwikkeling table {
+        display: none;
+    }
+}
